@@ -1,1 +1,509 @@
+/* =========================
+   LAKHAN MEHANDI ARTIST
+   MAIN WEBSITE STYLE
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #120b08;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 10, 5, 0.95);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at center,
+        rgba(255, 150, 0, 0.22),
+        transparent 45%),
+        linear-gradient(135deg, #160b08, #35130d, #100705);
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: heroAppear 1.2s ease;
+}
+
+.small-title {
+    color: #ffd700;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 100px);
+    line-height: 0.95;
+    text-shadow: 0 10px 30px #000;
+}
+
+.hero h1 span {
+    color: #ffd700;
+    text-shadow:
+        0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 30px rgba(255, 140, 0, 0.3);
+}
+
+.hero-text {
+    margin: 30px 0;
+    font-size: 20px;
+    color: #eee;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons,
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.call-btn {
+    background: #c47b00;
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.4);
+    animation: pulseCall 1.8s infinite;
+}
+
+.whatsapp-btn {
+    background: #159447;
+    box-shadow: 0 0 20px rgba(30, 220, 100, 0.4);
+    animation: pulseWhatsApp 1.8s infinite;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.04);
+}
+
+/* ================= SECTIONS ================= */
+
+.about,
+.gallery,
+.contact {
+    padding: 90px 7%;
+}
+
+.about {
+    background: #1b0e09;
+}
+
+.gallery {
+    background: #0e0806;
+}
+
+.contact {
+    background: #1b0e09;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #ffd700;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 6vw, 55px);
+    color: #fff;
+}
+
+/* ================= ABOUT ================= */
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 25px;
+
+    background: linear-gradient(145deg, #2b150d, #160a07);
+
+    border: 1px solid rgba(255, 215, 0, 0.25);
+
+    box-shadow:
+        15px 15px 35px #050302,
+        -10px -10px 30px rgba(255, 140, 0, 0.05);
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.small-call {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #ffd700;
+    color: #1b0e09;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.gallery-card {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 25px;
+
+    background: #21100b;
+
+    border: 2px solid rgba(255, 215, 0, 0.25);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6);
+
+    transform: perspective(1000px) rotateX(0deg);
+    transition: 0.6s ease;
+}
+
+.gallery-card:hover {
+    transform:
+        perspective(1000px)
+        rotateY(7deg)
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: #ffd700;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.12);
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box {
+    max-width: 900px;
+    margin: 0 auto 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 35px 25px;
+
+    border-radius: 25px;
+    background: #25120c;
+
+    border: 1px solid rgba(255, 215, 0, 0.2);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-item span {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    color: #ffd700;
+    margin-bottom: 12px;
+}
+
+.contact-item a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.contact-item p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating-buttons {
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    z-index: 2000;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-buttons a {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 25px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.floating-call {
+    background: #c47b00;
+    animation: pulseCall 1.8s infinite;
+}
+
+.floating-whatsapp {
+    background: #159447;
+    animation: pulseWhatsApp 1.8s infinite;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #090504;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+footer p:last-child {
+    color: #ffd700;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes pulseCall {
+
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 170, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1.06);
+        box-shadow: 0 0 0 18px rgba(255, 170, 0, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 170, 0, 0);
+    }
+}
+
+@keyframes pulseWhatsApp {
+
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(30, 220, 100, 0.7);
+    }
+
+    70% {
+        transform: scale(1.06);
+        box-shadow: 0 0 0 18px rgba(30, 220, 100, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(30, 220, 100, 0);
+    }
+}
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .about,
+    .gallery,
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .about-box {
+        padding: 30px 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-card {
+        height: 400px;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .floating-buttons {
+        right: 12px;
+        bottom: 15px;
+    }
+
+    .floating-buttons a {
+        width: 54px;
+        height: 54px;
+    }
+  }
